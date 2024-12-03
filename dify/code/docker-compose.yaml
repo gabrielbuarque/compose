@@ -280,9 +280,9 @@ services:
       - ./volumes/db/data:/var/lib/postgresql/data
     healthcheck:
       test: [ "CMD", "pg_isready" ]
-      interval: 1s
+      interval: 30s
       timeout: 3s
-      retries: 30
+      retries: 6
 
   # The redis cache.
   redis:
@@ -453,9 +453,9 @@ services:
       - ./volumes/pgvector/data:/var/lib/postgresql/data
     healthcheck:
       test: [ "CMD", "pg_isready" ]
-      interval: 1s
+      interval: 30s
       timeout: 3s
-      retries: 30
+      retries: 6
 
   # pgvecto-rs vector store
   pgvecto-rs:
