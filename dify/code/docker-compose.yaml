@@ -498,7 +498,7 @@ x-shared-env: &shared-api-worker-env
 
 services:
   api:
-    image: langgenius/dify-api:1.8.1
+    image: langgenius/dify-api:1.9.2
     restart: always
     environment:
       <<: *shared-api-worker-env
@@ -522,7 +522,7 @@ services:
       - default
 
   worker:
-    image: langgenius/dify-api:1.8.1
+    image: langgenius/dify-api:1.9.2
     restart: always
     environment:
       <<: *shared-api-worker-env
@@ -545,7 +545,7 @@ services:
 
   # NOVO no 1.8.x: scheduler de tarefas periódicas
   worker_beat:
-    image: langgenius/dify-api:1.8.1
+    image: langgenius/dify-api:1.9.2
     restart: always
     environment:
       <<: *shared-api-worker-env
@@ -560,7 +560,7 @@ services:
       - default
 
   web:
-    image: langgenius/dify-web:1.8.1
+    image: langgenius/dify-web:1.9.2
     restart: always
     environment:
       CONSOLE_API_URL: ${CONSOLE_API_URL:-}
