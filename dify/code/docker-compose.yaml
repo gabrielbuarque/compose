@@ -765,7 +765,7 @@ services:
 
   # === Vetores e bancos opcionais, mantidos como no seu arquivo ===
   weaviate:
-    image: semitechnologies/weaviate:1.19.0
+    image: semitechnologies/weaviate:1.27.0
     profiles: [ '', weaviate ]
     restart: always
     volumes:
